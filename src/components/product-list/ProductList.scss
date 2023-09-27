@@ -1,0 +1,15 @@
+.productsTable{
+    border-collapse: collapse;
+    width: 100%;
+    .productName{
+        // width: 40%;
+    }
+}
+tbody{
+    tr{
+        border-bottom: 1px solid black;
+    }
+    tr:last-child{
+        border: none;
+    }
+}

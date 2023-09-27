@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from '../product-table/Product'
+import Product from '../product-details/Product'
 import './ProductList.scss'
 
 const ProductList = () => {
@@ -17,18 +17,13 @@ const ProductList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <Product />
-                    </tr>
-                    <tr>
-                        <Product />
-                    </tr>
-                    <tr>
-                        <Product />
-                    </tr>
-                    <tr>
-                        <Product />
-                    </tr>
+                    <Product/>
+                    <Product/>
+                    <Product/>
+                    <Product/>
+                    <Product/>
+                    <Product/>
+
                 </tbody>
             </table>
         </div>

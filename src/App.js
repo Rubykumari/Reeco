@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/header/Header';
-import ProductList from './components/products/ProductList';
+import ProductList from './components/product-list/ProductList';
 
 function App() {
   return (

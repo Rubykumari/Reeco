@@ -1,7 +1,33 @@
 .header{
-    background-color: green;
+    background-color: #145214;
+    height: 44px;
     .headerMenu{
         display: flex;
         justify-content: space-around;
+        color: white;
+        ul{
+            display: flex;
+            list-style: none;
+            li {
+                margin-right: 40px;
+                margin-top: 7px;
+            }
+            li:first-child {
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 2px;
+              }
+        }
+        .lheader{
+            display: flex;
+            img{
+                width: 44px;
+                height: 44px;
+            }
+            p{
+                margin-top: 5px;
+                margin-left: 9px;
+            }
+        }
     }
 }
