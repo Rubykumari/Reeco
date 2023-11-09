@@ -5,10 +5,14 @@ import './Product.scss'
 
 function Product() {
     const [modal, setModal] = useState({ show: false });
+    const [editModal, setEditModal] = useState({ show: false });
     const [status, setStatus] = useState(null);
 
     const handleModal = () => {
         setModal({ show: true })
+    }
+    const editHandleModal = () => {
+        setEditModal({ show: true })
     }
     const approveProduct = () => {
         setStatus("Approved")
@@ -23,6 +27,9 @@ function Product() {
     }
     const closeModal = () => {
         setModal({ show: false })
+    }
+    const closeEditModal = ()=>{
+        setEditModal({show: false})
     }
     const dynamicStatus = () => {
         if (status === "Approved") {
@@ -64,7 +71,7 @@ function Product() {
                         <tr className='icons'>
                             <td onClick={approveProduct} className={dynamicIcons()}>&#x2713;</td>
                             <td onClick={handleModal} className={dynamiCancel()}>&#10060;</td>
-                            <td>Edit</td>
+                            <td onClick={editHandleModal}>Edit</td>
                         </tr>
                     </table>
 
@@ -73,6 +80,14 @@ function Product() {
 
             <div className="popupModal">
                 <Modal show={modal.show} onHide={closeModal}>
+                    <Modal.Header closeButton>Missing Product</Modal.Header>
+                    <Modal.Body>Is 'Chicken Breast Fillets, Boneless ...' urgent ?</Modal.Body>
+                    <Modal.Footer>
+                        <Button onClick={missingProduct}>No</Button>
+                        <Button onClick={updateStatus}>Yes</Button>
+                    </Modal.Footer>
+                </Modal>
+                <Modal show={editModal.show} onHide={closeEditModal}>
                     <Modal.Header closeButton>Missing Product</Modal.Header>
                     <Modal.Body>Is 'Chicken Breast Fillets, Boneless ...' urgent ?</Modal.Body>
                     <Modal.Footer>

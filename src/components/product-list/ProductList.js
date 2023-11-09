@@ -4,7 +4,6 @@ import './ProductList.scss'
 
 const ProductList = () => {
     return (
-        <div>
             <table className='productsTable'>
                 <thead>
                     <tr>
@@ -26,7 +25,6 @@ const ProductList = () => {
 
                 </tbody>
             </table>
-        </div>
     )
 }
 
